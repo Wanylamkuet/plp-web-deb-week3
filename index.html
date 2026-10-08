@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Budget Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>My Budget Tracker</h1>
+    <p>Track your income and expenses in one place.</p>
+
+    <section id="add-expense-section">
+        <h2>Add Expense</h2>
+
+        <form>
+            <div>
+                <label for="expense-name">Expense Name:</label>
+                <input type="text" id="expense-name" placeholder="e.g., Grocery Shopping">
+            </div>
+
+            <div>
+                <label for="expense-amount">Amount ($):</label>
+                <input type="number" id="expense-amount" placeholder="e.g., 50.00">
+            </div>
+
+            <div>
+                <label for="expense-category">Category:</label>
+
+                <input type="text" id="expense-category" placeholder="e.g., Food">
+            </div>
+
+            <button type="button">Add Expense</button>
+        </form>
+    </section>
+<section id="expenses-list-section">
+        <section class="expenses-section">
+  <h2>Expenses</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Groceries</td>
+        <td>$85.50</td>
+        <td>Food</td>
+        <td>2026-10-01</td>
+      </tr>
+      <tr>
+        <td>Bus Pass</td>
+        <td>$45.00</td>
+        <td>Transport</td>
+        <td>2026-10-02</td>
+      </tr>
+      <tr>
+        <td>Monthly Rent</td>
+        <td>$750.00</td>
+        <td>Rent</td>
+        <td>2026-10-03</td>
+      </tr>
+      <tr>
+        <td>Movie Ticket</td>
+        <td>$15.00</td>
+        <td>Entertainment</td>
+        <td>2026-10-04</td>
+      </tr>
+      <tr>
+        <td>Internet Bill</td>
+        <td>$60.00</td>
+        <td>Other</td>
+        <td>2026-10-05</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<!-- Google Fonts Import -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Page Heading Card -->
+  <header class="card">
+    <h1>Budget Tracker</h1>
+    <p>Manage your expenses and stay on top of your finances.</p>
+  </header>
+
+  <main>
+    <!-- Add Expense Form Card -->
+    <section class="card">
+      <h2>Add Expense</h2>
+      <form id="expense-form">
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" id="description" placeholder="e.g., Grocery shopping" required>
+        </div>
+
+        <div class="form-group">
+          <label for="amount">Amount ($)</label>
+          <input type="number" id="amount" placeholder="e.g., 45.00" step="0.01" required>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" required>
+            <option value="" disabled selected>Select a category</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Entertainment">Entertainment</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn">Add Expense</button>
+      </form>
+    </section>
+
+    <!-- Expense Table Card -->
+    <section class="card">
+      <h2>Expense History</h2>
+      <table class="expense-table">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Supermarket Shopping</td>
+            <td>Food</td>
+            <td>$52.40</td>
+          </tr>
+          <tr>
+            <td>Bus Fare</td>
+            <td>Transport</td>
+            <td>$3.50</td>
+          </tr>
+          <tr>
+            <td>Electricity Bill</td>
+            <td>Utilities</td>
+            <td>$65.00</td>
+          </tr>
+          <tr>
+            <td>Movie Ticket</td>
+            <td>Entertainment</td>
+            <td>$12.50</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
+<section class="add-expense-section">
+  <h2>Add New Expense</h2>
+
+  <!-- Wrapped inside a proper <form> element -->
+  <form id="expense-form">
+    
+    <!-- Expense Name Input -->
+    <div class="form-group">
+      <label for="expense-name">Expense Name:</label>
+      <input 
+        type="text" 
+        id="expense-name" 
+        name="expenseName" 
+        placeholder="e.g., Groceries" 
+        required
+      />
+    </div>
+
+    <!-- Expense Amount Input -->
+    <div class="form-group">
+      <label for="expense-amount">Amount ($):</label>
+      <input 
+        type="number" 
+        id="expense-amount" 
+        name="expenseAmount" 
+        step="0.01" 
+        placeholder="0.00" 
+        required
+      />
+    </div>
+
+    <!-- Category Dropdown (<select>) with at least 5 options -->
+    <div class="form-group">
+      <label for="expense-category">Category:</label>
+      <select id="expense-category" name="expenseCategory">
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Rent">Rent</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <!-- Expense Date Input -->
+    <div class="form-group">
+      <label for="expense-date">Date:</label>
+      <input 
+        type="date" 
+        id="expense-date" 
+        name="expenseDate"
+      />
+    </div>
+
+    <!-- Submit Button with type="button" -->
+    <button type="button" id="add-expense-btn">Add Expense</button>
+
+  </form>
+</section>
+<!-- Main Header with Logo -->
+<header>
+  <img src="budget.webp" alt="Budget tracker" width = "150" height = "150">
+  <h1>
+    Budget Tracker
+  </h1>
+</header>
+
+<!-- YouTube Video Embedding -->
+<section class="video-section">
+  <h2>Budgeting Tips</h2>
+  <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/-bqeNE1DOzA?si=c8JthGxA7UxOV0jP" 
+    title="Budgeting Tips" frameborder="1" allow="accelerometer; autoplay; clipboard-write; 
+    encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+  </iframe>
+</section>
+<!-- Interactive Collapsible Instructions -->
+<section class="instructions-section">
+  <details>
+    <summary>How to use this tracker</summary>
+    <p>
+      Use the "Add New Expense" form below to enter the name, amount, category, and date of your expense. 
+      Your tracked expenses will be displayed in the expense table for easy monitoring!
+    </p>
+  </details>
+</section>
+</body>
+</html>
+
+
+
